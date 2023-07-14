@@ -20,10 +20,7 @@ namespace Tarea11_Diego
         private void btn_RegistrarInge_Click(object sender, EventArgs e)
         {
             IngenieroCivil inge = new IngenieroCivil(txt_apellidos.Text,txt_nombres.Text,cmbox_condicionC.SelectedItem.ToString(),
-                cmbox_especialidadInge.SelectedItem.ToString(), Convert.ToInt32(txt_numeroObras.Text));
-            inge.SueldoBase(cmbox_cargoInge.SelectedItem.ToString());
-            inge.Descuento(cmbox_seguro.SelectedItem.ToString());
-            inge.Bonificacion();
+                cmbox_especialidadInge.SelectedItem.ToString(), Convert.ToInt32(txt_numeroObras.Text), cmbox_seguro.SelectedItem.ToString(), cmbox_cargoInge.SelectedItem.ToString());
             rchtxt_Inge.AppendText("" + Environment.NewLine);
             rchtxt_Inge.AppendText("Nombre Completo: " + inge.getNombres() + " " + inge.getApellidos() + Environment.NewLine);
             rchtxt_Inge.AppendText("Sueldo Base: " + inge.getSueldoBase() + Environment.NewLine);
@@ -41,10 +38,7 @@ namespace Tarea11_Diego
         private void btn_registrarArqui_Click(object sender, EventArgs e)
         {
             Arquitecto arqui = new Arquitecto(txt_apellidos.Text, txt_nombres.Text, cmbox_condicionC.SelectedItem.ToString(),
-                cmbox_especialidadArqui.SelectedItem.ToString(), Convert.ToInt32(txt_proyectosD.Text));
-            arqui.SueldoBase();
-            arqui.Descuento(cmbox_seguro.SelectedItem.ToString());
-            arqui.Bonificacion(cmbox_cargoArqui.SelectedItem.ToString());
+                cmbox_especialidadArqui.SelectedItem.ToString(), Convert.ToInt32(txt_proyectosD.Text), cmbox_seguro.SelectedItem.ToString(), cmbox_cargoArqui.SelectedItem.ToString());
             rchtxt_Arqui.AppendText("" + Environment.NewLine);
             rchtxt_Arqui.AppendText("Nombre Completo: " + arqui.getNombres() + " " + arqui.getApellidos() + Environment.NewLine);
             rchtxt_Arqui.AppendText("Sueldo Base: " + arqui.getSueldoBase() + Environment.NewLine);

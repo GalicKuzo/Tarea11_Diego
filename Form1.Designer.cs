@@ -284,8 +284,8 @@
             this.cmbox_especialidadArqui.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbox_especialidadArqui.FormattingEnabled = true;
             this.cmbox_especialidadArqui.Items.AddRange(new object[] {
-            "Restauración y Rehabilitacion",
-            "Materiales de Construccion",
+            "Restauración y Rehabilitación",
+            "Materiales de Construcción",
             "Paisajismo y Jardinería"});
             this.cmbox_especialidadArqui.Location = new System.Drawing.Point(122, 65);
             this.cmbox_especialidadArqui.Name = "cmbox_especialidadArqui";

@@ -12,15 +12,20 @@ namespace Tarea11_Diego
     {
         private int obras;
         private static int countIng = 0;
-        public IngenieroCivil(string Apellidos, string Nombres, string CondicionC, string Especialidad, int obras)
+        public IngenieroCivil(string Apellidos, string Nombres, string CondicionC, string Especialidad, int obras,string seguro, string cargo)
         {
             setApellidos(Apellidos);
             setNombres(Nombres);
             setCondicionC(CondicionC);
             setEspecialidad(Especialidad);
+            setSeguro(seguro);
+            setCargo(cargo);
             this.obras = obras;
             countIng++;
             Codigo();
+            SueldoBase();
+            Descuento();
+            Bonificacion();
         }
         public void Codigo()
         {
@@ -40,26 +45,26 @@ namespace Tarea11_Diego
         {
             return (SueldoBruto() - getDescuento()) + Movilidad();
         }
-        public void SueldoBase(string Cargo)
+        public void SueldoBase()
         {
             switch (getCondicionC())
             {
                 case "Estable":
-                    if (Cargo == "Supervisión de Obras")
+                    if (getCargo() == "Supervisión de Obras")
                     {
                         setSueldo(4000);
                     }
-                    if (Cargo == "Supervisión de Vías")
+                    if (getCargo() == "Supervisión de Vías")
                     {
                         setSueldo(6000);
                     }
                     break;
                 case "Contratado":
-                    if (Cargo == "Supervisión de Obras")
+                    if (getCargo() == "Supervisión de Obras")
                     {
                         setSueldo(2000);
                     }
-                    else if (Cargo == "Supervisión de Vías")
+                    else if (getCargo() == "Supervisión de Vías")
                     {
                         setSueldo(4500);
                     }
@@ -69,13 +74,13 @@ namespace Tarea11_Diego
                     break;
             }
         }
-        public void Descuento(string Seguro)
+        public void Descuento()
         {
-            if (Seguro == "AFP")
+            if (getSeguro() == "AFP")
             {
                 setDescuento(getSueldoBase() * 0.17);
             }
-            if (Seguro == "Essalud")
+            if (getSeguro() == "Essalud")
                 setDescuento(getSueldoBase() * 0.05);
         }
         public void Bonificacion()

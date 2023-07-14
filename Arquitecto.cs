@@ -10,15 +10,20 @@ namespace Tarea11_Diego
     {
         private int proyectos;
         private static int countArqui = 0;
-        public Arquitecto(string Apellidos, string Nombres, string CondicionC, string Especialidad, int proyectos)
+        public Arquitecto(string Apellidos, string Nombres, string CondicionC, string Especialidad, int proyectos, string seguro, string cargo)
         {
             setApellidos(Apellidos);
             setNombres(Nombres);
             setCondicionC(CondicionC);
             setEspecialidad(Especialidad);
+            setSeguro(seguro);
+            setCargo(cargo);
             this.proyectos = proyectos;
             countArqui++;
             Codigo();
+            SueldoBase();
+            Descuento();
+            Bonificacion();
         }
         public int getProyectos()
         {
@@ -69,20 +74,20 @@ namespace Tarea11_Diego
             }
 
         }
-        public void Descuento(string Seguro)
+        public void Descuento()
         {
-            if (Seguro == "AFP")
+            if (getSeguro() == "AFP")
             {
                 setDescuento(getSueldoBase() * 0.17);
             }
-            if (Seguro == "Essalud")
+            if (getSeguro() == "Essalud")
                 setDescuento(0);
         }
-        public void Bonificacion(string Cargo)
+        public void Bonificacion()
         {
-            if (Cargo == "Director de Obras")
+            if (getCargo() == "Director de Obras")
                 setBonificacion(getSueldoBase() * 0.25);
-            if (Cargo == "Edificador Industrial")
+            if (getCargo() == "Edificador Industrial")
                 setBonificacion(getSueldoBase() * 0.29);
         }
     }

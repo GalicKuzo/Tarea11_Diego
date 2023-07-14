@@ -16,8 +16,25 @@ namespace Tarea11_Diego
         private int sueldoBase;
         private double descuento;
         private double bonificacion;
+        private string seguro;
+        private string cargo;
 
-
+        public void setSeguro(string Seguro)
+        {
+            seguro = Seguro;
+        }
+        public string getSeguro()
+        {
+            return seguro;
+        }
+        public void setCargo(string Cargo)
+        {
+            cargo = Cargo;
+        }
+        public string getCargo()
+        {
+            return cargo;
+        }
         public double SueldoBruto()
         {
             return sueldoBase + bonificacion;
@@ -28,10 +45,7 @@ namespace Tarea11_Diego
         }
         public void setSueldo(int sueldoBase)
         {
-            if (sueldoBase == 4000 || sueldoBase == 6000 || sueldoBase == 2000 || sueldoBase == 4500 || sueldoBase == 0)
-            {
-                this.sueldoBase = sueldoBase;
-            }
+            this.sueldoBase = sueldoBase;
         }
         public int getSueldoBase()
         {
