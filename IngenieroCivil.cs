@@ -29,14 +29,6 @@ namespace Tarea11_Diego
             if (countIng >= 10 && countIng < 100)
                 setCodigo("INGC000" + countIng);
         }
-        public int getContador()
-        {
-            return countIng;
-        }
-        public int getObras()
-        {
-            return obras;
-        }
         public int Movilidad()
         {
             if (obras < 17)

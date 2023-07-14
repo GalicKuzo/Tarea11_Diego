@@ -53,6 +53,8 @@
             this.cmbox_cargoArqui = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.txt_proyectosD = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -91,6 +93,7 @@
             this.txt_nombres.Name = "txt_nombres";
             this.txt_nombres.Size = new System.Drawing.Size(242, 22);
             this.txt_nombres.TabIndex = 3;
+            this.txt_nombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombres_KeyPress);
             // 
             // txt_apellidos
             // 
@@ -98,6 +101,7 @@
             this.txt_apellidos.Name = "txt_apellidos";
             this.txt_apellidos.Size = new System.Drawing.Size(242, 22);
             this.txt_apellidos.TabIndex = 4;
+            this.txt_apellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellidos_KeyPress);
             // 
             // cmbox_condicionC
             // 
@@ -141,6 +145,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.txt_proyectosD);
+            this.tabPage2.Controls.Add(this.label8);
             this.tabPage2.Controls.Add(this.rchtxt_Arqui);
             this.tabPage2.Controls.Add(this.btn_registrarArqui);
             this.tabPage2.Controls.Add(this.cmbox_especialidadArqui);
@@ -213,6 +219,8 @@
             this.txt_numeroObras.Name = "txt_numeroObras";
             this.txt_numeroObras.Size = new System.Drawing.Size(224, 22);
             this.txt_numeroObras.TabIndex = 5;
+            this.txt_numeroObras.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_numeroObras_KeyDown);
+            this.txt_numeroObras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_numeroObras_KeyPress);
             // 
             // btn_RegistrarInge
             // 
@@ -257,20 +265,23 @@
             // 
             // rchtxt_Arqui
             // 
+            this.rchtxt_Arqui.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rchtxt_Arqui.Location = new System.Drawing.Point(29, 107);
             this.rchtxt_Arqui.Name = "rchtxt_Arqui";
+            this.rchtxt_Arqui.ReadOnly = true;
             this.rchtxt_Arqui.Size = new System.Drawing.Size(655, 207);
             this.rchtxt_Arqui.TabIndex = 16;
             this.rchtxt_Arqui.Text = "";
             // 
             // btn_registrarArqui
             // 
-            this.btn_registrarArqui.Location = new System.Drawing.Point(338, 39);
+            this.btn_registrarArqui.Location = new System.Drawing.Point(338, 61);
             this.btn_registrarArqui.Name = "btn_registrarArqui";
             this.btn_registrarArqui.Size = new System.Drawing.Size(344, 31);
             this.btn_registrarArqui.TabIndex = 15;
             this.btn_registrarArqui.Text = "Registrar Arquitecto";
             this.btn_registrarArqui.UseVisualStyleBackColor = true;
+            this.btn_registrarArqui.Click += new System.EventHandler(this.btn_registrarArqui_Click);
             // 
             // cmbox_especialidadArqui
             // 
@@ -314,6 +325,23 @@
             this.label10.Size = new System.Drawing.Size(47, 16);
             this.label10.TabIndex = 9;
             this.label10.Text = "Cargo:";
+            // 
+            // txt_proyectosD
+            // 
+            this.txt_proyectosD.Location = new System.Drawing.Point(553, 20);
+            this.txt_proyectosD.Name = "txt_proyectosD";
+            this.txt_proyectosD.Size = new System.Drawing.Size(131, 22);
+            this.txt_proyectosD.TabIndex = 18;
+            this.txt_proyectosD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_proyectosD_KeyPress);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(337, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(210, 16);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Numero de Proyectos Diseñados:";
             // 
             // Form1
             // 
@@ -368,6 +396,8 @@
         private System.Windows.Forms.ComboBox cmbox_cargoArqui;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txt_proyectosD;
+        private System.Windows.Forms.Label label8;
     }
 }
 
