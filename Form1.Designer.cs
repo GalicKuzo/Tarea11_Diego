@@ -36,25 +36,25 @@
             this.cmbox_condicionC = new System.Windows.Forms.ComboBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbox_cargoInge = new System.Windows.Forms.ComboBox();
-            this.cmbox_especialidadInge = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txt_numeroObras = new System.Windows.Forms.TextBox();
-            this.btn_RegistrarInge = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cmbox_seguro = new System.Windows.Forms.ComboBox();
             this.rchtxt_Inge = new System.Windows.Forms.RichTextBox();
+            this.btn_RegistrarInge = new System.Windows.Forms.Button();
+            this.txt_numeroObras = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbox_especialidadInge = new System.Windows.Forms.ComboBox();
+            this.cmbox_cargoInge = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txt_proyectosD = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.rchtxt_Arqui = new System.Windows.Forms.RichTextBox();
             this.btn_registrarArqui = new System.Windows.Forms.Button();
             this.cmbox_especialidadArqui = new System.Windows.Forms.ComboBox();
             this.cmbox_cargoArqui = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.txt_proyectosD = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cmbox_seguro = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -143,6 +143,87 @@
             this.tabPage1.Text = "Ingeniero Civil";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // rchtxt_Inge
+            // 
+            this.rchtxt_Inge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rchtxt_Inge.Location = new System.Drawing.Point(27, 107);
+            this.rchtxt_Inge.Name = "rchtxt_Inge";
+            this.rchtxt_Inge.ReadOnly = true;
+            this.rchtxt_Inge.Size = new System.Drawing.Size(655, 207);
+            this.rchtxt_Inge.TabIndex = 8;
+            this.rchtxt_Inge.Text = "";
+            // 
+            // btn_RegistrarInge
+            // 
+            this.btn_RegistrarInge.Location = new System.Drawing.Point(338, 58);
+            this.btn_RegistrarInge.Name = "btn_RegistrarInge";
+            this.btn_RegistrarInge.Size = new System.Drawing.Size(344, 31);
+            this.btn_RegistrarInge.TabIndex = 7;
+            this.btn_RegistrarInge.Text = "Registrar Ingeniero Civil";
+            this.btn_RegistrarInge.UseVisualStyleBackColor = true;
+            this.btn_RegistrarInge.Click += new System.EventHandler(this.btn_RegistrarInge_Click);
+            // 
+            // txt_numeroObras
+            // 
+            this.txt_numeroObras.Location = new System.Drawing.Point(458, 20);
+            this.txt_numeroObras.Name = "txt_numeroObras";
+            this.txt_numeroObras.Size = new System.Drawing.Size(224, 22);
+            this.txt_numeroObras.TabIndex = 5;
+            this.txt_numeroObras.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_numeroObras_KeyDown);
+            this.txt_numeroObras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_numeroObras_KeyPress);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(335, 23);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(117, 16);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Numero de Obras:";
+            // 
+            // cmbox_especialidadInge
+            // 
+            this.cmbox_especialidadInge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_especialidadInge.FormattingEnabled = true;
+            this.cmbox_especialidadInge.Items.AddRange(new object[] {
+            "Estructuras",
+            "Recursos Hídricos",
+            "Ingeniería Vial"});
+            this.cmbox_especialidadInge.Location = new System.Drawing.Point(120, 65);
+            this.cmbox_especialidadInge.Name = "cmbox_especialidadInge";
+            this.cmbox_especialidadInge.Size = new System.Drawing.Size(160, 24);
+            this.cmbox_especialidadInge.TabIndex = 3;
+            // 
+            // cmbox_cargoInge
+            // 
+            this.cmbox_cargoInge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_cargoInge.FormattingEnabled = true;
+            this.cmbox_cargoInge.Items.AddRange(new object[] {
+            "Supervisión de Obras",
+            "Supervisión de Vías"});
+            this.cmbox_cargoInge.Location = new System.Drawing.Point(77, 20);
+            this.cmbox_cargoInge.Name = "cmbox_cargoInge";
+            this.cmbox_cargoInge.Size = new System.Drawing.Size(203, 24);
+            this.cmbox_cargoInge.TabIndex = 2;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(24, 68);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(90, 16);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Especialidad:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(24, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(47, 16);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Cargo:";
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.txt_proyectosD);
@@ -161,107 +242,22 @@
             this.tabPage2.Text = "Arquitecto";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // txt_proyectosD
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 23);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(47, 16);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Cargo:";
+            this.txt_proyectosD.Location = new System.Drawing.Point(553, 20);
+            this.txt_proyectosD.Name = "txt_proyectosD";
+            this.txt_proyectosD.Size = new System.Drawing.Size(131, 22);
+            this.txt_proyectosD.TabIndex = 18;
+            this.txt_proyectosD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_proyectosD_KeyPress);
             // 
-            // label5
+            // label8
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 68);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 16);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Especialidad:";
-            // 
-            // cmbox_cargoInge
-            // 
-            this.cmbox_cargoInge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbox_cargoInge.FormattingEnabled = true;
-            this.cmbox_cargoInge.Items.AddRange(new object[] {
-            "Supervisión de Obras",
-            "Supervisión de Vías"});
-            this.cmbox_cargoInge.Location = new System.Drawing.Point(77, 20);
-            this.cmbox_cargoInge.Name = "cmbox_cargoInge";
-            this.cmbox_cargoInge.Size = new System.Drawing.Size(203, 24);
-            this.cmbox_cargoInge.TabIndex = 2;
-            // 
-            // cmbox_especialidadInge
-            // 
-            this.cmbox_especialidadInge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbox_especialidadInge.FormattingEnabled = true;
-            this.cmbox_especialidadInge.Items.AddRange(new object[] {
-            "Estructuras",
-            "Recursos Hídricos",
-            "Ingeniería Vial"});
-            this.cmbox_especialidadInge.Location = new System.Drawing.Point(120, 65);
-            this.cmbox_especialidadInge.Name = "cmbox_especialidadInge";
-            this.cmbox_especialidadInge.Size = new System.Drawing.Size(160, 24);
-            this.cmbox_especialidadInge.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(335, 23);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 16);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Numero de Obras:";
-            // 
-            // txt_numeroObras
-            // 
-            this.txt_numeroObras.Location = new System.Drawing.Point(458, 20);
-            this.txt_numeroObras.Name = "txt_numeroObras";
-            this.txt_numeroObras.Size = new System.Drawing.Size(224, 22);
-            this.txt_numeroObras.TabIndex = 5;
-            this.txt_numeroObras.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_numeroObras_KeyDown);
-            this.txt_numeroObras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_numeroObras_KeyPress);
-            // 
-            // btn_RegistrarInge
-            // 
-            this.btn_RegistrarInge.Location = new System.Drawing.Point(338, 58);
-            this.btn_RegistrarInge.Name = "btn_RegistrarInge";
-            this.btn_RegistrarInge.Size = new System.Drawing.Size(344, 31);
-            this.btn_RegistrarInge.TabIndex = 7;
-            this.btn_RegistrarInge.Text = "Registrar Ingeniero Civil";
-            this.btn_RegistrarInge.UseVisualStyleBackColor = true;
-            this.btn_RegistrarInge.Click += new System.EventHandler(this.btn_RegistrarInge_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(351, 62);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(54, 16);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Seguro:";
-            // 
-            // cmbox_seguro
-            // 
-            this.cmbox_seguro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbox_seguro.FormattingEnabled = true;
-            this.cmbox_seguro.Items.AddRange(new object[] {
-            "AFP",
-            "Essalud"});
-            this.cmbox_seguro.Location = new System.Drawing.Point(411, 59);
-            this.cmbox_seguro.Name = "cmbox_seguro";
-            this.cmbox_seguro.Size = new System.Drawing.Size(256, 24);
-            this.cmbox_seguro.TabIndex = 8;
-            // 
-            // rchtxt_Inge
-            // 
-            this.rchtxt_Inge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rchtxt_Inge.Location = new System.Drawing.Point(27, 107);
-            this.rchtxt_Inge.Name = "rchtxt_Inge";
-            this.rchtxt_Inge.ReadOnly = true;
-            this.rchtxt_Inge.Size = new System.Drawing.Size(655, 207);
-            this.rchtxt_Inge.TabIndex = 8;
-            this.rchtxt_Inge.Text = "";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(337, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(210, 16);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Numero de Proyectos Diseñados:";
             // 
             // rchtxt_Arqui
             // 
@@ -326,22 +322,26 @@
             this.label10.TabIndex = 9;
             this.label10.Text = "Cargo:";
             // 
-            // txt_proyectosD
+            // label7
             // 
-            this.txt_proyectosD.Location = new System.Drawing.Point(553, 20);
-            this.txt_proyectosD.Name = "txt_proyectosD";
-            this.txt_proyectosD.Size = new System.Drawing.Size(131, 22);
-            this.txt_proyectosD.TabIndex = 18;
-            this.txt_proyectosD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_proyectosD_KeyPress);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(351, 62);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(54, 16);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Seguro:";
             // 
-            // label8
+            // cmbox_seguro
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(337, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(210, 16);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Numero de Proyectos Diseñados:";
+            this.cmbox_seguro.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbox_seguro.FormattingEnabled = true;
+            this.cmbox_seguro.Items.AddRange(new object[] {
+            "AFP",
+            "Essalud"});
+            this.cmbox_seguro.Location = new System.Drawing.Point(411, 59);
+            this.cmbox_seguro.Name = "cmbox_seguro";
+            this.cmbox_seguro.Size = new System.Drawing.Size(256, 24);
+            this.cmbox_seguro.TabIndex = 8;
             // 
             // Form1
             // 
@@ -358,7 +358,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
