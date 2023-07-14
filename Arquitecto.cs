@@ -63,7 +63,7 @@ namespace Tarea11_Diego
                     {
                         setSueldo(4600);
                     }
-                    if (getEspecialidad() == "Paísajismo y Jardinería")
+                    if (getEspecialidad() == "Paisajismo y Jardinería")
                     {
                         setSueldo(4600);
                     }
