@@ -222,6 +222,7 @@
             this.btn_RegistrarInge.TabIndex = 7;
             this.btn_RegistrarInge.Text = "Registrar Ingeniero Civil";
             this.btn_RegistrarInge.UseVisualStyleBackColor = true;
+            this.btn_RegistrarInge.Click += new System.EventHandler(this.btn_RegistrarInge_Click);
             // 
             // label7
             // 
@@ -246,8 +247,10 @@
             // 
             // rchtxt_Inge
             // 
+            this.rchtxt_Inge.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.rchtxt_Inge.Location = new System.Drawing.Point(27, 107);
             this.rchtxt_Inge.Name = "rchtxt_Inge";
+            this.rchtxt_Inge.ReadOnly = true;
             this.rchtxt_Inge.Size = new System.Drawing.Size(655, 207);
             this.rchtxt_Inge.TabIndex = 8;
             this.rchtxt_Inge.Text = "";
